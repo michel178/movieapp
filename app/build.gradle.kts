@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 
+    alias(libs.plugins.hilt)
     alias(libs.plugins.kotlin.kapt)
 }
 
@@ -75,17 +76,21 @@ dependencies {
     implementation("androidx.room:room-paging:2.6.0")
 
 
-    implementation("com.google.dagger:hilt-android:2.48")
-    kapt("com.google.dagger:hilt-compiler:2.44")
-    kapt("androidx.hilt:hilt-compiler:1.1.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+    kapt(libs.hilt.compiler)
+    implementation(libs.hilt.navigation.compose)
 
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
+
+
+    implementation("io.coil-kt:coil-compose:2.4.0")
+
+    implementation("androidx.compose.material:material-icons-extended:1.5.4")
 
 
 }
