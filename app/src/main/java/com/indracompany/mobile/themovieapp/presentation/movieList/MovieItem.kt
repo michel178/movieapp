@@ -42,6 +42,7 @@ import coil.request.ImageRequest
 import coil.size.Size
 import com.indracompany.mobile.themovieapp.data.remote.MovieApi
 import com.indracompany.mobile.themovieapp.domain.model.Movie
+import com.indracompany.mobile.themovieapp.util.Screen
 
 
 @Composable
@@ -72,7 +73,7 @@ fun MovieItem(
                 )
             )
             .clickable {
-
+                navHostController.navigate(Screen.Details.rout + "/${movie.id}")
             }
     ) {
 

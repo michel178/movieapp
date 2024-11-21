@@ -3,4 +3,6 @@
 
 
     <string name="upcoming_movies">Próximas películas</string>
+    <string name="release_date">"Fecha de estreno: "</string>
+    <string name="overview">Resumen</string>
 </resources>

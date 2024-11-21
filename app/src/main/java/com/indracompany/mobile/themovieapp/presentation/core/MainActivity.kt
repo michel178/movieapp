@@ -8,9 +8,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.indracompany.mobile.themovieapp.presentation.movieDetails.DetailsScreen
 import com.indracompany.mobile.themovieapp.ui.theme.TheMovieAppTheme
 import com.indracompany.mobile.themovieapp.util.Screen
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,7 +42,14 @@ class MainActivity : ComponentActivity() {
                             HomeScreen(navController)
                         }
 
-
+                        composable(
+                            Screen.Details.rout + "/{movieId}",
+                            arguments = listOf(
+                                navArgument("movieId") { type = NavType.IntType }
+                            )
+                        ) { backStackEntry ->
+                            DetailsScreen()
+                        }
 
                     }
 
