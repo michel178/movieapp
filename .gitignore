@@ -12,8 +12,14 @@ local.properties
 captures/
 .externalNativeBuild/
 .cxx/
-*.apk
 output.json
+.navigation
+
+#built application files
+*.apk
+*.ap_
+*.aab
+
 
 # IntelliJ
 *.iml
@@ -31,3 +37,27 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+
+# Windows thumbnail db
+Thumbs.db
+
+# OSX files
+.DS_Store
+                             
+# generated files
+bin/
+gen/
+
+#NDK
+obj/
+ 
+
+
